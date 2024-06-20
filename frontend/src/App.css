@@ -1,0 +1,26 @@
+body, html {
+    height: 100%;
+    margin: 0;
+  }
+  
+  #root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .main-content {
+    flex: 1;
+  }
+  
+  footer {
+    background: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  header, nav {
+    z-index: 100001 !important;
+  }
+  

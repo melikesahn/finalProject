@@ -1,0 +1,39 @@
+.banner .swiper {
+    width: 240px;
+    height: 320px;
+  }
+  
+  .banner .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+    background-size: cover; /* Resmi banner alanına sığdırmak için */
+    background-position: center; /* Resmi yatay ve dikey olarak ortalamak için */
+  }
+  
+  .banner .swiper-slide:nth-child(1n) {
+    background-image: url('../assets/banner-card/prens.jpg');
+    
+  }
+  
+  .banner .swiper-slide:nth-child(2n) {
+    background-image: url('../assets/banner-card/oliver.jpg');
+    
+  }
+  
+  .banner .swiper-slide:nth-child(3n) {
+    background-image: url('../assets/banner-card/emma.jpg');
+  }
+  
+  .banner .swiper-slide:nth-child(4n) {
+    background-image: url('../assets/banner-card/macbeth.jpg');
+  }
+  
+  .banner .swiper-slide:nth-child(5n) {
+    background-image: url('../assets/banner-card/890.jpg');
+  }
+  
