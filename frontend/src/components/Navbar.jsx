@@ -3,6 +3,11 @@ import { Link } from 'react-router-dom';
 import { FaBarsStaggered, FaXmark } from "react-icons/fa6";
 import { FcReadingEbook } from "react-icons/fc";
 import { AuthContext } from '../contects/AuthProvider';
+import logoImage from '../assets/logo.svg' // logo dosyanızın yolunu düzeltin
+import { FaRegUser } from "react-icons/fa";
+import { Dropdown } from "flowbite-react";
+import './Navbar.css';
+
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -45,9 +50,9 @@ const Navbar = () => {
     return (
         <header className='w-full bg-transparent fixed top-0 left-0 right-0 transition-all ease-in duration-300'>
             <nav className={`py-4 lg:px-24 px-4  ${isSticky ? "sticky top-0 left-0 right-0 bg-teal-200":""}`}>
-                <div className='flex justify-between items-center text-base gap-8'>
-                    <Link to="/" className="text-2xl font-bold text-cyan-900 flex items-center gap-2">
-                        <FcReadingEbook className="inline-block" />
+                <div className='flex justify-between items-center text-base gap-8 '>
+                <Link to="/" className="text-2xl font-bold text-cyan-900 flex items-center gap-2 custom-font">
+                        <img src={logoImage} alt="ExBook Logo" className="inline-block h-8 w-auto" />
                         ExBook
                     </Link>
                     <ul className='md:flex space-x-12 hidden mx-auto'>
@@ -61,12 +66,17 @@ const Navbar = () => {
                         
                     </ul>
                     {/* btn for lg devices */}
-                    <div className='space-x-12  1g:flex items-center'>
-                        <button><FaBarsStaggered className='w-5 hover:text-cyan-900'/></button>
-                       {/* {
-                            user? user.email :""
-                        }*/}
-                    </div>
+                    <div className='space-x-8 lg:flex items-center'>
+                            <Dropdown inline
+                                label={<FaRegUser className='size-4 w-4 hover:text-cyan-900 cursor-pointer' />}
+                                placement="top"
+                            >
+                                <Dropdown.Item>Profile</Dropdown.Item>
+                                <Dropdown.Item>Ayarlar</Dropdown.Item>
+                                <Dropdown.Item>Çıkış Yap</Dropdown.Item>
+                            </Dropdown>
+                            {user ? user.email : ""}
+                            </div>
                     {/* mobile menu */}
                     <div className='md:hidden'>
                         <button onClick={toggleMenu} className='text-black focus:outline-none'>

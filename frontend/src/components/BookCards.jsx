@@ -3,6 +3,7 @@ import React, { useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Link } from 'react-router-dom';
 
+
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';

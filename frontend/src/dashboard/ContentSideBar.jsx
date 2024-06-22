@@ -46,7 +46,7 @@ const ContentSideBar = () => {
         </Sidebar.ItemGroup>
         <Sidebar.ItemGroup>
           
-          <Sidebar.Item href="#" icon={FaBookAtlas}>
+          <Sidebar.Item href="/about" icon={FaBookAtlas}>
             Yardım
           </Sidebar.Item>
           <Sidebar.Item>

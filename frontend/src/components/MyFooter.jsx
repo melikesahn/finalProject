@@ -4,8 +4,8 @@ import { BsDribbble, BsFacebook, BsGithub, BsInstagram, BsTwitter } from "react-
 
 const MyFooter = () => {
   return (
-    <Footer bgDark>
-    <div className="w-full px-4 lg:px-24">
+    <Footer className='bg-cyan-100'>
+    <div className="  w-full px-4 lg:px-24">
       <div className="grid w-full grid-cols-2 gap-8 px-6 py-8 md:grid-cols-4">
         <div>
           <Footer.Title title="Şirket" />
@@ -40,7 +40,7 @@ const MyFooter = () => {
           </Footer.LinkGroup>
         </div>
       </div>
-      <div className="w-full bg-gray-700 px-4 py-6 sm:flex sm:items-center sm:justify-between">
+      <div className="w-full bg-teal-900 px-4 py-6 sm:flex sm:items-center sm:justify-between">
         <Footer.Copyright href="#" by="ExBoook" year={2024} />
         <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
           <Footer.Icon href="#" icon={BsFacebook} />

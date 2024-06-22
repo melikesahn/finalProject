@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useContext } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../contects/AuthProvider';
+import logoImage from '../assets/logo.svg' // logo dosyanızın yolunu düzeltin
 
 const Login = () => {
     const { login, loginwithGoogle} = useContext(AuthContext);
@@ -54,13 +55,19 @@ const Login = () => {
   return (
     <div className='min-h-screen bg-white py-6 flex flex-col justify-center sm:py-12'>
     <div className='relative py-3 sm:max-w-xl sm:mx-auto'>
+       {/* SVG Kart */}
+       
 
     <div className="relative py-3 sm:max-w-xl sm:mx-auto">
 <div
 className="relative px-4 py-10 bg-teal-100 mx-8 md:mx-0 shadow rounded-3xl sm:p-10"
 >
+  
 <div  className="max-w-md mx-auto">
+
   <div className="flex items-center space-x-5 justify-center">
+  <img src={logoImage} alt="ExBook Logo" className="inline-block h-8 w-auto" />
+  
     <h1 className='font-bold text-3xl text-teal-800'>Giriş Yap</h1>
   </div>
   <form onSubmit={handleLogin} className="mt-5">

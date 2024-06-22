@@ -32,7 +32,7 @@ function App() {
           <Route path="/shop" element={<Shop />} />
           <Route path="/about" element={<About />} />
           <Route path="/blog" element={<Blog />} />
-          <Route path="/book/:id" element={<SingleBook />} />
+          <Route path="/book/:id" element={<SingleBook/>} />
           <Route path="/admin/dashboard" element={<PrivateRoute><DashboardLayout /></PrivateRoute>}>
             <Route index element={<Dashboard />} />
             <Route path="upload" element={<UploadBooks />} />

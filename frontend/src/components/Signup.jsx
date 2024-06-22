@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useContext } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../contects/AuthProvider';
+import logoImage from '../assets/logo.svg' // logo dosyanızın yolunu düzeltin
 
 const Signup = () => {
     const { createUser, loginwithGoogle} = useContext(AuthContext);
@@ -26,6 +27,7 @@ const Signup = () => {
             .then((userCredential) => {
                 // Signed up 
                 const user = userCredential.user;
+                const userId = user.uid; // Kullanıcı UID'sini al
 
                 alert("Kaydınız Başarılı Bir Şekilde Gerçekleşti...")
                 navigate(from,{replace:true})
@@ -43,6 +45,8 @@ const Signup = () => {
     const handleRegister = () =>{
         loginwithGoogle().then((result)=>{
             const user =result.user;
+            const userId = user.uid; // Kullanıcı UID'sini al
+
             alert("Kaydınız Başarılı Bir Şekilde Gerçekleşti...")
             navigate(from,{replace:true})
         }).catch((error) => {
@@ -62,6 +66,7 @@ const Signup = () => {
   >
     <div  className="max-w-md mx-auto">
       <div className="flex items-center space-x-5 justify-center">
+      <img src={logoImage} alt="ExBook Logo" className="inline-block h-8 w-auto" />
         <h1 className='font-bold text-3xl text-teal-800'>Kayıt Ol</h1>
       </div>
       <form onSubmit={handleSignUp} className="mt-5">
